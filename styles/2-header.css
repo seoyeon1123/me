@@ -48,9 +48,9 @@ li.header__nav-item{
     display: block;
     width: var(--height-toolbar);
     height: var(--height-toolbar);
-    background-image: url(/images/bars-solid.svg);
+    background-image: url(https://seoyeon1123.github.io/me/images/bars-solid.svg);
     background-size: contain;
-    background-size: 100%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
   }
