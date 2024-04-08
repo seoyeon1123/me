@@ -50,7 +50,7 @@ li.header__nav-item{
     height: var(--height-toolbar);
     background-image: url(/images/bars-solid.svg);
     background-size: contain;
-    background-size: 50%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
   }
