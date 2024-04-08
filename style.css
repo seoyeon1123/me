@@ -1,0 +1,100 @@
+@import url('./styles/1-intro.css');
+@import url('./styles/2-header.css');
+@import url('./styles/3-main.css');
+@import url('./styles/4-project.css');
+@import url('./styles/5-html-css.css');
+@import url('./styles/6-curriculum.css');
+@import url('./styles/7-contact.css');
+@import url('./styles/8-footer.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Orbit&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+.poor-story-regular {
+  font-family: "Poor Story", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===== 변수 구간 ===== */
+:root {
+  --color-main: lightpink;
+  --color-sub: #00A200;
+  --color-dark: #414446;
+  --color-emph: #F10F5F;
+  --color-text: #281812;
+  --color-lighter: #DC9C86;
+  --color-light-bd: #FFE6D6;
+  --color-light-bg: #FFF5ED;
+
+  --font-code: 'Orbit', monospace;
+
+  --font-size-title: 44px;
+  --font-size-subtitle: 32px;
+  --font-size-tag: 26px;
+  --font-size-larger: 20px;
+  --font-size-text: 18px;
+
+  --height-toolbar: 72px;
+
+}
+/* ===== 리셋 구간 ===== */
+
+body {
+  margin: 0;
+  font-family: 'Orbit', sans-serif;
+
+  /* 개발용 설정 */
+  min-height: 150vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+strong, em {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+dl { margin: 0; }
+dd {
+  margin: 0;
+  display: inline;
+}
+
+figure { margin: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+th { font-weight: normal; }
+
+address { font-style: inherit; }
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}

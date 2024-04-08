@@ -1,0 +1,136 @@
+.github-velog {
+  margin: 56px 0;
+  display: inline-flex;
+  gap: 56px;
+}
+
+.github-velog__desc{
+  margin-top: 1.6em;
+  font-size: var(--font-size-text);
+  color: var(--color-text);
+}
+.github-velog__desc strong{
+  font-weight: bold;
+}
+
+.github-velog__title{
+  font-size: var(--font-size-subtitle);
+  font-weight: 100;
+}
+
+._github .github-velog__title em { color: #F16528; }
+._velog .github-velog__title em { color: #2965F1; }
+
+.github-velog__spec{
+  margin-top: 1.6em;
+
+}
+.github-velog__spec dd{
+  margin-right: 1.2em;
+  font-size: var(--font-size-large);
+  color: var(--color-lighter);
+}
+
+.github-velog__spec dd::before{
+  content: "";
+  display: inline-block;
+  margin-right: 0.5em;
+  width: 12px;
+  height: 8px;
+  border-left: 4px solid tomato;
+  border-bottom: 4px solid tomato;
+  vertical-align: 0.2em;
+  /*vertical-align 속성은 텍스트와 인라인 요소를 수직으로 정렬하는 데 사용*/
+  transform: rotate(-45deg);
+}
+
+.github-velog__thumb{
+  position: relative;
+}
+
+.github-velog__thumb::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  height: 10%;
+  background-color: black;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  #github { 
+    border-bottom: 4px solid var(--color-light-bg); 
+  }
+  .github-velog {
+    flex-direction: column;
+  }
+
+  .github-velog__logo {
+    width: 50%;
+  }
+
+  .github-velog__content{
+    text-align: center;
+  }
+
+  .github-velog__content div{
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .github-velog__thumb::after{
+    left: 25%;
+    bottom: -16%;
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 769px) {
+  #github{
+      border-right: 4px solid var(--color-light-bg);
+    }
+  
+  .github-velog__logo {
+    width: 144px;
+  }
+
+  .github-velog__content{
+    text-align: left;
+  }
+  .github-velog__thumb::after{
+    left: calc(50% - 72px);
+    bottom: -24px;
+    width: 144px;
+    animation-name: logo-shadow;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+}
+
+.github-velog__logo{
+  animation-name: logo-hover;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* 둥둥 오르내리는 효과 */
+@keyframes logo-hover {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
+}
+
+@keyframes logo-shadow{
+  from {
+    opacity: 0.5;
+  }
+  to{
+    opacity: 0.24;
+  }
+}

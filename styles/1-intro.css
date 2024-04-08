@@ -1,0 +1,109 @@
+.intro{
+  position: relative;
+  background-image:url(/images/coffee-1284041_1280.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.intro-dark{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*모든 영역에 0을 주는것은 부모 영역에 모두 차지한다는 것을 의미함. */
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  /*ackground-color: rgba(0,0,0,0.67);: 배경색을 검은색(rgb(0, 0, 0))으로 지정하고, 투명도를 0.67로 설정합니다.*/
+}
+
+.intro-type{
+  display: inline-flex;
+  gap: 0.32em;
+  font-family: var(--font-code);
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.underscore{
+  animation-name: blink;
+  animation-duration: 350ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* [class^="intro__tilt"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: var(--color-main);
+  clip-path: polygon(100% 90%, 100% 100%, 0 100%, 0 0);
+}
+
+.intro__tilt--flip {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 90%);
+  opacity: 0.5;
+} */
+
+.custom-shape-divider-bottom-1712543122 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1712543122 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 279px;
+}
+
+.custom-shape-divider-bottom-1712543122 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/*모바일*/
+@media (max-width: 768px) {
+  .intro{
+    height: 100vh;
+  }
+
+  .intro-type{
+    margin-top: 36vh;
+    flex-direction: column;
+  }
+}
+
+/*데스크탑*/
+@media (min-width: 769px) {
+  .intro{
+    height: 600px;
+  }
+
+  .intro-type{
+    margin-top: 250px;
+    align-items: center;
+  }
+
+  .intro-type > span{
+    display: inline-block;
+    vertical-align: center;
+    margin-bottom: 0.24em;
+  }
+}
+
+@keyframes blink{
+ from{
+  opacity: 0;
+ }
+
+ to{
+  opacity: 1;
+ }
+}
